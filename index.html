@@ -1,0 +1,33 @@
+<!<!DOCTYPE html>
+<html ng-app='TypeShift'>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TypeShift | Type Unit Converter</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<meta name="description" content="TypeShift is a super simple web app for converting font measurements quickly and easily">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/vendors/jquery-1.10.1.min.js"></script>
+	<script src="js/vendors/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+	
+<body>
+	<div class="container" ng-controller="MainController">
+    	<header>
+        	<h1>TypeShift</h1>
+            <p>TypeShift is a super simple app for converting font measurements quickly and easily.</p>
+        </header>
+    	
+		<div class="main">
+			<input type="number" alt="input" ng-model="input" autofocus>
+			<select ng-options="k for k in options.values" ng-model="options.value"></select>
+		</div>
+		
+		<div class="unit" ng-repeat="v in units">{{ calculate(v) | number: 2 }} {{ v }}</div>
+		<footer>
+			<p>Need TypeShift on the go? Grab the Android app on</p>
+		</footer>
+	</div>
+</body>
+</html><!-- and that's all she wrote -->
