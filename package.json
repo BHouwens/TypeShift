@@ -1,15 +1,8 @@
 {
-<<<<<<< HEAD
-  "name": "new-project",
-  "version": "0.1.0",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-=======
   "name": "TypeShift",
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.5",
->>>>>>> 4b7481f2abba2ed3ea1279031603b31467d5eba9
     "grunt-contrib-sass": "^0.7.3",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-combine-media-queries": "^1.0.15"
