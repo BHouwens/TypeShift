@@ -1,0 +1,45 @@
+/*==============TYPOGRAPHY======================*/
+
+*{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+        font-family: 'AdrianeText';
+        src: url('#{$path-fonts}/AdrianeReg.eot'); /* IE9 Compat Modes */
+        src: url('#{$path-fonts}/AdrianeReg.eot') format('embedded-opentype'), /* IE6-IE8 */
+             url('#{$path-fonts}/AdrianeReg.woff') format('woff'), /* Modern Browsers */
+             url('#{$path-fonts}/AdrianeReg.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('#{$path-fonts}/AdrianeReg.svg') format('svg'); /* Legacy iOS */
+}  
+
+%open-sans{
+    font-family:'Open Sans', Arial, Helvetica, sans-serif;
+}  
+
+/*========================================================*/
+
+
+p{
+    font-family:'AdrianeText', Georgia, serif;
+    font-size: 20px;
+    color:white;
+}
+
+header p{
+    display:none;
+    margin-top:30px !important;
+
+    @include breakpoint("large"){
+        float:left;
+        margin-left:2% !important;
+        display:block;
+    }
+}
+
+footer p{
+    margin-top: 20px !important;
+}

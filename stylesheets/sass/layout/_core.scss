@@ -1,0 +1,74 @@
+/*================== CORE =======================*/
+
+html,
+button,
+input,
+textarea {
+    color: white;
+}
+
+body{
+	background:$heading-blue;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+.container{
+	width:100%;
+}
+
+header{
+	height:90px;
+	display:block;
+	background:$heading-blue;
+}
+
+footer{
+	height:100px;
+	display:block;
+	background:url('#{$path-img}pattern.png');
+	text-align:center;
+}
+
+a{
+	background:url('#{$path-img}google.png');
+	@include size(135px, 44px);
+	display:block;
+}
+
+.main{
+	height:400px;
+	width:100%;
+	display:block;
+	background:url('#{$path-img}pattern.png');
+	text-align:right;
+}
+
+.unit{
+	height:120px;
+	display:block;
+	@extend %open-sans;
+	font-size:70px;
+	font-weight:300;
+	text-align:right;
+	padding-right: 5%;
+	border-top:1px solid $light-blue;
+}
+
+.clearfix{
+	@extend %clearfix;
+	*zoom: 1;
+}

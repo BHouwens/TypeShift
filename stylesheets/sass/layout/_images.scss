@@ -1,0 +1,12 @@
+/*================== IMAGES =======================*/
+
+img{
+	display:block;
+	margin:10px auto;
+	@include size(300px, auto);
+
+	@include breakpoint("large"){
+		float:left;
+		margin:10px 0 30px 10%;
+	}
+}

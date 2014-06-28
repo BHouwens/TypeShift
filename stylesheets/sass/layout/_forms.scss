@@ -1,0 +1,47 @@
+/*================== FORMS =======================*/
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number]{
+	background:transparent;
+	border:none;
+	color:white;
+	width:80%;
+	@extend %open-sans;
+	@extend %borderBox;
+	font-size:130px;
+	font-weight:300;
+	height:250px;
+	text-align:right;
+	float:left;
+	display:block;
+	margin-left:0;
+	margin-top:30px;
+
+	@include breakpoint("medium"){
+		margin-left:3%;	
+	}
+}
+
+select{	
+	float:left;
+	display:block;
+	border:0;
+	background:transparent;
+	-webkit-appearance:none;
+	height:300px;
+	width:17%;
+	font-size:60px !important;
+	@extend %open-sans;
+	font-weight:400 !important;	
+	color:$heading-blue;
+
+	@include breakpoint("medium"){
+		font-size:100px !important;
+		float:right;
+	}
+}
