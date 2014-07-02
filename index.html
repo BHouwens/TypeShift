@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app='TypeShift'>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TypeShift | Type Unit Converter</title>
+	<link rel="stylesheet" href="stylesheets/main.css" type="text/css"/>
+	<link rel="stylesheet" href="stylesheets/vendors/normalize.min.css" type="text/css"/>
+	<link rel="icon" type="image/ico" href="favicon.ico"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<meta name="description" content="TypeShift is a super simple web app for converting font measurements quickly and easily">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/vendors/jquery-1.10.1.min.js"></script>
+	<script src="js/vendors/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+	
+<body>
+	<div class="container clearfix" ng-controller="MainController">
+    	<header class="clearfix">
+        	<img src="img/logo.png" alt="typeshift" title="TypeShift">
+            <p>TypeShift is a super simple app for converting font measurements quickly and easily.</p>
+        </header>
+    	
+		<div class="main">
+			<input type="number" alt="input" ng-model="input" autofocus>
+			<select ng-options="k for k in options.values" ng-model="options.value"></select>
+		</div>
+		
+		<div class="unit" ng-repeat="v in units">{{ calculate(v) | number: 2 }} {{ v }}</div>
+		<footer class="clearfix">
+			<p>Need TypeShift on the go? Grab the Android app on </p>
+		</footer>
+	</div>
+</body>
+</html><!-- and that's all she wrote -->
