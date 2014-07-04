@@ -5,7 +5,7 @@ TypeShift.controller('MainController', ['$scope', function($scope){
 		type: "select",
 		name: "px",
 		value: "px",
-		values: ["px", "points", "ems", "%"]
+		values: ["px", "pt", "ems", "%"]
 	}
 	
 	$scope.units = ["px", "pts", "ems", "%"];
@@ -27,7 +27,7 @@ TypeShift.controller('MainController', ['$scope', function($scope){
 						break;
 				}
 			}else
-			if  ($("option:selected").text() == "points"){
+			if  ($("option:selected").text() == "pt"){
 				switch(value){
 					case "px":
 						return ($scope.input * 1.3333);
@@ -75,5 +75,5 @@ TypeShift.controller('MainController', ['$scope', function($scope){
 						break;
 				}
 			}
-	}//end $scope.calculate
+	}
 }]);
