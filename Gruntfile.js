@@ -21,8 +21,7 @@ module.exports = function(grunt){
                 },
                 
                 files: {
-                  'stylesheets/main.css': 'stylesheets/sass/main.scss'
-
+                    'stylesheets/main.css': 'stylesheets/sass/main.scss'
                 }
             }
         },
@@ -47,6 +46,7 @@ module.exports = function(grunt){
                 options:{
                     spawn: false,
                 }
+            },
         }
         
     });
@@ -56,4 +56,5 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-combine-media-queries');
 
     grunt.registerTask('default', ['sass','cmq']);
+    
 };

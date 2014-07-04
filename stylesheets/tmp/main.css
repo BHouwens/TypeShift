@@ -142,7 +142,6 @@ input[type=number] {
 }
 
 select {
-	float: left;
 	display: block;
 	border: 0;
 	background: transparent;

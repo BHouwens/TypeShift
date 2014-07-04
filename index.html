@@ -24,12 +24,13 @@
     	
 		<div class="main">
 			<input type="number" alt="input" ng-model="input" autofocus>
-			<select ng-options="k for k in options.values" ng-model="options.value"></select>
+			<select id="options" ng-options="k for k in options.values" ng-model="options.value"></select>
 		</div>
 		
 		<div class="unit" ng-repeat="v in units">{{ calculate(v) | number: 2 }} {{ v }}</div>
 		<footer class="clearfix">
-			<p>Need TypeShift on the go? Grab the Android app on </p>
+			<a style="margin-top:20px;" href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-size="large" data-text="Check out TypeShift to start converting web type: " data-count="none">Share This</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</footer>
 	</div>
 </body>
